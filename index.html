@@ -45,14 +45,12 @@
             font-size: 18px; 
             line-height: 1.5; 
         }
-        /* Gallery (2 columns) */
+        /* Gallery */
         .gallery { 
-            display: grid; 
-            grid-template-columns: repeat(2, 1fr); /* Two equal columns */
-            gap: 20px; 
+            display: flex; 
+            flex-wrap: wrap; 
+            justify-content: center; 
             padding: 20px; 
-            max-width: 1200px; 
-            margin: 0 auto; 
         }
         .art-item { 
             margin: 15px; 
@@ -96,19 +94,20 @@
     <div class="menu">
         <a href="index.html">Home</a>
         <a href="gallery.html">Gallery</a>
+        <a href="shop.html">Shop</a>
         <a href="about.html">About Me</a>
         <a href="contact.html">Contact Me</a>
     </div>
     <!-- Welcome Message -->
     <div class="welcome">
         <p>Welcome to Mrs. Sonsquatch’s digital art portfolio, where whimsical nature-inspired paintings come to life.</p>
-        <p>Explore my collection of owls, polar bears, eagles, tulips, shrooms, and geodes, each crafted with vibrant digital techniques.</p>
-        <p>Click any artwork to visit the gallery and purchase prints starting at $25 and up, perfect for adding a touch of magic to your space.</p>
+        <p>Explore my collection of wildlife and landscapes, each crafted with vibrant digital techniques.</p>
+        <p>Visit the shop to purchase prints starting at $25 and up, perfect for adding a touch of magic to your space.</p>
     </div>
-    <!-- Gallery/Shop Preview (2 columns) -->
+    <!-- Gallery Section -->
     <div class="gallery">
         <div class="art-item">
-            <a href="shop/owl.html"><img src="owl.jpg" alt="Burrow Owl Digital Painting"></a>
+            <a href="shop/owl1.html"><img src="owl1.jpg" alt="Burrow Owl Digital Painting"></a>
             <h2>Burrow Owl</h2>
             <p>$25 and up</p>
         </div>
