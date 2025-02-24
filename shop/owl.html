@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mrs. Sonsquatch - Burrow Owl</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 0; 
+            background: #F5F5F5; 
+            color: #333; 
+        }
+        .container { 
+            max-width: 800px; 
+            margin: 20px auto; 
+            padding: 20px; 
+            text-align: center; 
+        }
+        .art-item { 
+            margin-bottom: 40px; 
+        }
+        .art-image img { 
+            max-width: 400px; 
+            height: auto; 
+        }
+        h1 { 
+            font-family: 'Dancing Script', cursive; 
+            font-size: 36px; 
+            color: #546E7A; 
+        }
+        h2 { 
+            font-size: 24px; 
+            color: #607D8B; 
+            margin: 10px 0; 
+        }
+        p { 
+            font-size: 16px; 
+            margin: 5px 0; 
+        }
+        .buy-button { 
+            background: #607D8B; 
+            color: white; 
+            border: none; 
+            padding: 10px 20px; 
+            border-radius: 5px; 
+            cursor: pointer; 
+        }
+        .buy-button:hover { 
+            background: #455A64; 
+        }
+        .back-link { 
+            display: block; 
+            margin-top: 20px; 
+            color: #607D8B; 
+            text-decoration: none; 
+            font-size: 16px; 
+        }
+        .back-link:hover { 
+            text-decoration: underline; 
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Burrow Owl Collection</h1>
+
+        <!-- Original Digital Painting -->
+        <div class="art-item">
+            <h2>Digital Painting</h2>
+            <div class="art-image">
+                <img src="../owl.jpg" alt="Burrow Owl Digital Painting">
+            </div>
+            <p>Price: $25 and up</p>
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <input type="hidden" name="cmd" value="_xclick">
+                <input type="hidden" name="business" value="adventureswithsonsquatch@gmail.com">
+                <input type="hidden" name="item_name" value="Burrow Owl Digital Painting">
+                <input type="hidden" name="amount" value="25.00">
+                <input type="hidden" name="currency_code" value="USD">
+                <input type="hidden" name="return" value="https://Mrs-Sonsquatch.github.io/thanks.html">
+                <input type="hidden" name="cancel_return" value="https://Mrs-Sonsquatch.github.io/cancel.html">
+                <input type="submit" class="buy-button" value="Buy Now">
+            </form>
+        </div>
+
+        <!-- Hardbound Blank Journal -->
+        <div class="art-item">
+            <h2>Hardbound Blank Journal</h2>
+            <div class="art-image">
+                <img src="../owl1.jpg" alt="Burrow Owl Hardbound Blank Journal">
+            </div>
+            <p>Price: $30</p>
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <input type="hidden" name="cmd" value="_xclick">
+                <input type="hidden" name="business" value="adventureswithsonsquatch@gmail.com">
+                <input type="hidden" name="item_name" value="Burrow Owl Hardbound Blank Journal">
+                <input type="hidden" name="amount" value="30.00">
+                <input type="hidden" name="currency_code" value="USD">
+                <input type="hidden" name="return" value="https://Mrs-Sonsquatch.github.io/thanks.html">
+                <input type="hidden" name="cancel_return" value="https://Mrs-Sonsquatch.github.io/cancel.html">
+                <input type="submit" class="buy-button" value="Buy Now">
+            </form>
+        </div>
+
+        <!-- Spiral Bound Lined Notebook -->
+        <div class="art-item">
+            <h2>Spiral Bound Lined Notebook</h2>
+            <div class="art-image">
+                <img src="../owl2.jpg" alt="Burrow Owl Spiral Bound Lined Notebook">
+            </div>
+            <p>Price: $25</p>
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <input type="hidden" name="cmd" value="_xclick">
+                <input type="hidden" name="business" value="adventureswithsonsquatch@gmail.com">
+                <input type="hidden" name="item_name" value="Burrow Owl Spiral Bound Lined Notebook">
+                <input type="hidden" name="amount" value="25.00">
+                <input type="hidden" name="currency_code" value="USD">
+                <input type="hidden" name="return" value="https://Mrs-Sonsquatch.github.io/thanks.html">
+                <input type="hidden" name="cancel_return" value="https://Mrs-Sonsquatch.github.io/cancel.html">
+                <input type="submit" class="buy-button" value="Buy Now">
+            </form>
+        </div>
+
+        <a href="../index.html" class="back-link">Back to Gallery</a>
+    </div>
+</body>
+</html>
