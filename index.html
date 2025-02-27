@@ -5,29 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Mrs. Sonsquatch’s art portfolio featuring whimsical nature-inspired digital paintings. Explore the gallery, read the blog, join the gold mining club, or shop for prints.">
     <meta name="keywords" content="digital art, nature paintings, wildlife art, landscape art, art prints, blog, gold mining club">
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Mrs. Sonsquatch - Art Portfolio">
+    <meta property="og:description" content="Explore whimsical nature-inspired digital paintings by Mrs. Sonsquatch.">
+    <meta property="og:image" content="https://www.yoursite.com/path/to/image.jpg"> <!-- Replace with your image URL -->
+    <meta property="og:url" content="https://www.yoursite.com"> <!-- Replace with your site URL -->
+    <meta name="twitter:card" content="summary_large_image">
     <title>Mrs. Sonsquatch - Art Portfolio</title>
     <style>
         body { 
-            font-family: Arial, sans-serif; 
+            font-family: 'Open Sans', sans-serif; 
             margin: 0; 
-            background: #F5F5F5; /* Light background for contrast */
+            background: #F5F5F5; 
             color: #333; 
         }
-        /* Banner */
         .banner { 
-            background: #455A64; /* Darkest gray-blue */
+            background: #455A64; 
             color: white; 
             padding: 20px; 
             text-align: center; 
         }
         .banner h1 { 
-            font-family: 'Dancing Script', cursive; /* Whimsical font */
+            font-family: 'Dancing Script', cursive; 
             font-size: 36px; 
             margin: 0; 
         }
-        /* Menu */
         .menu { 
-            background: #607D8B; /* Medium gray-blue */
+            background: #607D8B; 
             padding: 10px; 
             text-align: center; 
         }
@@ -35,19 +39,21 @@
             color: white; 
             text-decoration: none; 
             margin: 0 15px; 
-            font-family: Arial, sans-serif; 
+            font-family: 'Open Sans', sans-serif; 
             font-size: 16px; 
         }
-        .menu a:hover { text-decoration: underline; }
-        /* Welcome Message */
+        .menu a:hover { 
+            color: white; 
+            text-decoration: underline; 
+            text-decoration-color: #A8C090; /* Light sage green underline */
+        }
         .welcome { 
             padding: 20px; 
             text-align: center; 
-            color: #546E7A; /* Lighter gray-blue */
+            color: #546E7A; 
             font-size: 18px; 
             line-height: 1.5; 
         }
-        /* Gallery */
         .gallery { 
             display: flex; 
             flex-wrap: wrap; 
@@ -62,9 +68,13 @@
             box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
             text-align: center; 
             max-width: 250px; 
+            transition: box-shadow 0.3s; 
+        }
+        .art-item:hover { 
+            box-shadow: 0 4px 10px rgba(79, 121, 66, 0.5); /* Dark sage green shadow */
         }
         .art-item img { 
-            max-width: 100%; /* Changed for responsiveness */
+            max-width: 100%; 
             height: auto; 
             transition: transform 0.3s; 
         }
@@ -73,26 +83,30 @@
             cursor: pointer; 
         }
         .art-item h2 { 
-            font-family: 'Dancing Script', cursive; /* Whimsical headings */
+            font-family: 'Dancing Script', cursive; 
             font-size: 24px; 
-            color: #546E7A; /* Lighter gray-blue */
+            color: #546E7A; 
             margin: 10px 0; 
         }
         .art-item p { 
-            font-family: Arial, sans-serif; /* Readable body */
+            font-family: 'Open Sans', sans-serif; 
             font-size: 16px; 
             margin: 10px 0; 
             color: #333; 
         }
-        /* Teaser Sections */
         .blog-teaser, .club-teaser {
+            border: 1px solid #ddd;
             padding: 20px;
             text-align: center;
             color: #546E7A;
             font-size: 18px;
             line-height: 1.5;
         }
-        /* Footer */
+        .blog-teaser h2, .club-teaser h2 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 24px;
+            color: #546E7A;
+        }
         footer {
             background: #607D8B;
             color: white;
@@ -107,7 +121,15 @@
         footer a:hover {
             text-decoration: underline;
         }
-        /* Responsiveness */
+        /* General link styles */
+        a {
+            color: #546E7A;
+            text-decoration: none;
+        }
+        a:hover {
+            color: #4F7942; /* Dark sage green */
+            text-decoration: underline;
+        }
         @media (max-width: 600px) {
             .menu {
                 display: flex;
@@ -126,14 +148,12 @@
             }
         }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Banner -->
     <div class="banner">
         <h1>Mrs. Sonsquatch Art</h1>
     </div>
-    <!-- Menu -->
     <div class="menu">
         <a href="/">Home</a>
         <a href="/art-portfolio/">Art Portfolio</a>
@@ -143,16 +163,13 @@
         <a href="/about/">About Me</a>
         <a href="/contact/">Contact</a>
     </div>
-    <!-- Welcome Message -->
     <div class="welcome">
-        <p>Welcome to Mrs. Sonsquatch’s digital art portfolio, where whimsical nature-inspired paintings come to life.</p>
-        <p>Explore my collection of wildlife and landscapes, each crafted with vibrant digital techniques.</p>
-        <p>Visit the shop to purchase prints starting at $25 and up, perfect for adding a touch of magic to your space.</p>
+        <p>Step into the enchanting world of Mrs. Sonsquatch, where each stroke of digital paint brings the wonders of nature to life. From majestic wildlife to serene landscapes, my collection invites you to experience the beauty and whimsy of the natural world.</p>
+        <p>Explore the gallery, lose yourself in the blog, join the gold mining club for exclusive insights, or bring a piece of this magic home with our art prints starting at $25.</p>
     </div>
-    <!-- Gallery Section -->
     <div class="gallery">
         <div class="art-item">
-            <a href="/shop/owl1.html"><img src="owl1.jpg" alt="Burrow Owl Digital Painting"></a>
+            <a href="/shop/owl1.html"><img src="owl.jpg" alt="Burrow Owl Digital Painting"></a>
             <h2>Burrow Owl</h2>
             <p>$25 and up</p>
         </div>
@@ -182,23 +199,20 @@
             <p>$25 and up</p>
         </div>
     </div>
-    <!-- Blog Teaser -->
     <div class="blog-teaser">
         <h2>Latest from the Blog</h2>
         <p>Read about other artists' works and my mining life adventures.</p>
         <p><a href="/blog/">View Blog</a></p>
     </div>
-    <!-- Gold Mining Club Teaser -->
     <div class="club-teaser">
         <h2>Gold Mining Club</h2>
         <p>Join our community of gold mining enthusiasts.</p>
         <p><a href="/gold-mining-club/">Learn More</a></p>
     </div>
-    <!-- Footer -->
     <footer>
-        <p>&copy; 2023 Mrs. Sonsquatch</p>
-        <a href="https://instagram.com/mrssonsquatch">Instagram</a>
-        <a href="https://x.com/mrssonsquatch">X</a>
+        <p>© 2025 Mrs. Sonsquatch</p>
+        <a href="https://www.instagram.com/mrssonsquatch" target="_blank" rel="noopener" title="Follow on Instagram">Instagram</a>
+        <a href="https://x.com/@leahdiscovers" target="_blank" rel="noopener" title="Follow on X">X</a>
     </footer>
 </body>
 </html>
