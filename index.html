@@ -8,8 +8,8 @@
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Mrs. Sonsquatch - Art Portfolio">
     <meta property="og:description" content="Explore whimsical nature-inspired digital paintings by Mrs. Sonsquatch.">
-    <meta property="og:image" content="https://www.yoursite.com/path/to/image.jpg"> <!-- Replace with your image URL -->
-    <meta property="og:url" content="https://www.yoursite.com"> <!-- Replace with your site URL -->
+    <meta property="og:image" content="https://www.yoursite.com/path/to/image.jpg">
+    <meta property="og:url" content="https://www.yoursite.com">
     <meta name="twitter:card" content="summary_large_image">
     <title>Mrs. Sonsquatch - Art Portfolio</title>
     <style>
@@ -45,7 +45,7 @@
         .menu a:hover { 
             color: white; 
             text-decoration: underline; 
-            text-decoration-color: #A8C090; /* Light sage green underline */
+            text-decoration-color: #A8C090;
         }
         .welcome { 
             padding: 20px; 
@@ -54,45 +54,60 @@
             font-size: 18px; 
             line-height: 1.5; 
         }
-        .gallery { 
-            display: flex; 
-            flex-wrap: wrap; 
-            justify-content: center; 
-            padding: 20px; 
+        .carousel-container {
+            position: relative;
+            max-width: 800px;
+            margin: 20px auto;
+            overflow: hidden;
+            padding: 20px;
         }
-        .art-item { 
-            margin: 15px; 
-            padding: 15px; 
-            background: white; 
-            border-radius: 5px; 
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
-            text-align: center; 
-            max-width: 250px; 
-            transition: box-shadow 0.3s; 
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease;
         }
-        .art-item:hover { 
-            box-shadow: 0 4px 10px rgba(79, 121, 66, 0.5); /* Dark sage green shadow */
+        .carousel-item {
+            flex: 0 0 100%;
+            text-align: center;
+            padding: 15px;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
-        .art-item img { 
-            max-width: 100%; 
-            height: auto; 
-            transition: transform 0.3s; 
+        .carousel-item:hover {
+            box-shadow: 0 4px 10px rgba(79, 121, 66, 0.5);
         }
-        .art-item img:hover { 
-            transform: scale(1.05); 
-            cursor: pointer; 
+        .carousel-item img {
+            max-width: 100%;
+            height: auto;
+            transition: transform 0.3s;
         }
-        .art-item h2 { 
-            font-family: 'Dancing Script', cursive; 
-            font-size: 24px; 
-            color: #546E7A; 
-            margin: 10px 0; 
+        .carousel-item img:hover {
+            transform: scale(1.05);
+            cursor: pointer;
         }
-        .art-item p { 
-            font-family: 'Open Sans', sans-serif; 
-            font-size: 16px; 
-            margin: 10px 0; 
-            color: #333; 
+        .carousel-item h2 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 24px;
+            color: #546E7A;
+            margin: 10px 0;
+        }
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(96, 125, 139, 0.8);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+        .prev-btn {
+            left: 10px;
+        }
+        .next-btn {
+            right: 10px;
         }
         .blog-teaser, .club-teaser {
             border: 1px solid #ddd;
@@ -121,13 +136,12 @@
         footer a:hover {
             text-decoration: underline;
         }
-        /* General link styles */
         a {
             color: #546E7A;
             text-decoration: none;
         }
         a:hover {
-            color: #4F7942; /* Dark sage green */
+            color: #4F7942;
             text-decoration: underline;
         }
         @media (max-width: 600px) {
@@ -139,11 +153,7 @@
             .menu a {
                 margin: 5px 0;
             }
-            .gallery {
-                flex-direction: column;
-                align-items: center;
-            }
-            .art-item {
+            .carousel-container {
                 max-width: 90%;
             }
         }
@@ -165,39 +175,37 @@
     </div>
     <div class="welcome">
         <p>Step into the enchanting world of Mrs. Sonsquatch, where each stroke of digital paint brings the wonders of nature to life. From majestic wildlife to serene landscapes, my collection invites you to experience the beauty and whimsy of the natural world.</p>
-        <p>Explore the gallery, lose yourself in the blog, join the gold mining club for exclusive insights, or bring a piece of this magic home with our art prints starting at $25.</p>
+        <p>Explore the gallery, lose yourself in the blog, join the gold mining club for exclusive insights, or bring a piece of this magic home with our art prints.</p>
     </div>
-    <div class="gallery">
-        <div class="art-item">
-            <a href="/shop/owl1.html"><img src="owl.jpg" alt="Burrow Owl Digital Painting"></a>
-            <h2>Burrow Owl</h2>
-            <p>$25 and up</p>
+    <div class="carousel-container">
+        <div class="carousel">
+            <div class="carousel-item">
+                <a href="/shop/owl.html"><img src="owl.jpg" alt="Burrow Owl Digital Painting"></a>
+                <h2>Burrow Owl</h2>
+            </div>
+            <div class="carousel-item">
+                <a href="/shop/polarbears.html"><img src="polarbears.jpg" alt="A Mother's Watch Digital Painting"></a>
+                <h2>A Mother's Watch</h2>
+            </div>
+            <div class="carousel-item">
+                <a href="/shop/eagle.html"><img src="eagle.jpg" alt="Golden Eagle Digital Painting"></a>
+                <h2>Golden Eagle</h2>
+            </div>
+            <div class="carousel-item">
+                <a href="/shop/tulip.html"><img src="tulip.jpg" alt="Tulip Digital Painting"></a>
+                <h2>Tulip</h2>
+            </div>
+            <div class="carousel-item">
+                <a href="/shop/shrooms.html"><img src="shrooms.jpg" alt="Shrooms Digital Painting"></a>
+                <h2>Shrooms</h2>
+            </div>
+            <div class="carousel-item">
+                <a href="/shop/geode.html"><img src="geode.jpg" alt="Amethyst Geode Digital Painting"></a>
+                <h2>Amethyst Geode</h2>
+            </div>
         </div>
-        <div class="art-item">
-            <a href="/shop/polarbears.html"><img src="polarbears.jpg" alt="A Mother's Watch Digital Painting"></a>
-            <h2>A Mother's Watch</h2>
-            <p>$25 and up</p>
-        </div>
-        <div class="art-item">
-            <a href="/shop/eagle.html"><img src="eagle.jpg" alt="Golden Eagle Digital Painting"></a>
-            <h2>Golden Eagle</h2>
-            <p>$25 and up</p>
-        </div>
-        <div class="art-item">
-            <a href="/shop/tulip.html"><img src="tulip.jpg" alt="Tulip Digital Painting"></a>
-            <h2>Tulip</h2>
-            <p>$25 and up</p>
-        </div>
-        <div class="art-item">
-            <a href="/shop/shrooms.html"><img src="shrooms.jpg" alt="Shrooms Digital Painting"></a>
-            <h2>Shrooms</h2>
-            <p>$25 and up</p>
-        </div>
-        <div class="art-item">
-            <a href="/shop/geode.html"><img src="geode.jpg" alt="Amethyst Geode Digital Painting"></a>
-            <h2>Amethyst Geode</h2>
-            <p>$25 and up</p>
-        </div>
+        <button class="carousel-btn prev-btn">&lt;</button>
+        <button class="carousel-btn next-btn">&gt;</button>
     </div>
     <div class="blog-teaser">
         <h2>Latest from the Blog</h2>
@@ -211,8 +219,31 @@
     </div>
     <footer>
         <p>© 2025 Mrs. Sonsquatch</p>
-        <a href="https://www.instagram.com/mrssonsquatch" target="_blank" rel="noopener" title="Follow on Instagram">Instagram</a>
+        <a href="https://www.instagram.com/Sonsquatchadv" target="_blank" rel="noopener" title="Follow on Instagram">Instagram</a>
         <a href="https://x.com/@leahdiscovers" target="_blank" rel="noopener" title="Follow on X">X</a>
     </footer>
+
+    <script>
+        const carousel = document.querySelector('.carousel');
+        const items = document.querySelectorAll('.carousel-item');
+        const prevBtn = document.querySelector('.prev-btn');
+        const nextBtn = document.querySelector('.next-btn');
+        let currentIndex = 0;
+
+        function updateCarousel() {
+            const offset = -currentIndex * 100;
+            carousel.style.transform = `translateX(${offset}%)`;
+        }
+
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex > 0) ? currentIndex - 1 : items.length - 1;
+            updateCarousel();
+        });
+
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex < items.length - 1) ? currentIndex + 1 : 0;
+            updateCarousel();
+        });
+    </script>
 </body>
 </html>
